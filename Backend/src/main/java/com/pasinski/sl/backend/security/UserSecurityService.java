@@ -20,6 +20,7 @@ public class UserSecurityService {
     }
 
     public boolean isAdmin() {
+
         return getRolesOfLoggedUser().stream().anyMatch(role -> role.getName().equals("ROLE_ADMIN"));
     }
 
@@ -28,7 +29,8 @@ public class UserSecurityService {
 //    }
 
     public Long getLoggedUserId() {
-        AppUser loggedUser = (AppUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();;
+        AppUser loggedUser = (AppUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
         return loggedUser.getIdUser();
     }
 

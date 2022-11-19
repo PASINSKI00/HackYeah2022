@@ -12,3 +12,5 @@ Tasks:
 - No meat
 
 
+To implement:
+- user email verification

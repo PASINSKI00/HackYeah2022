@@ -74,4 +74,8 @@ public class AppUser implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+    public void removeRole(Role adminRole) {
+        roles.remove(adminRole);
+    }
 }

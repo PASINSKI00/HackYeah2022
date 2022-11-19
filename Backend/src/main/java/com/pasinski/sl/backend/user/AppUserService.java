@@ -88,4 +88,18 @@ public class AppUserService implements UserDetailsService {
         appUser.addRole(adminRole);
         appUserRepository.save(appUser);
     }
+
+    public void removeAdminRole(AdminRequestForm adminRequestForm) {
+        AppUser appUser = appUserRepository.findById(adminRequestForm.getIdUser()).orElseThrow(() -> new HttpClientErrorException(HttpStatus.NOT_FOUND));
+        Role adminRole = roleRepository.findByName("ROLE_ADMIN");
+
+        if(!userSecurityService.isAdmin())
+            throw new HttpClientErrorException(HttpStatus.FORBIDDEN);
+
+        if(!appUser.getRoles().contains(adminRole))
+            return;
+
+        appUser.removeRole(adminRole);
+        appUserRepository.save(appUser);
+    }
 }

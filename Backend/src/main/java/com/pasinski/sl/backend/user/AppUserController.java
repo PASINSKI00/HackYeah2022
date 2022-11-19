@@ -73,9 +73,24 @@ public class AppUserController {
     }
 
     @PostMapping("/admin")
+    @PreAuthorize("isAuthenticated()")
     public ResponseEntity<?> assignAdminRole(@RequestBody AdminRequestForm adminRequestForm) {
         try {
             appUserService.assignAdminRole(adminRequestForm);
+        } catch (HttpClientErrorException e){
+            return new ResponseEntity<>(e.getStatusCode());
+        } catch (Error e){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @DeleteMapping("/admin")
+    @PreAuthorize("isAuthenticated()")
+    public ResponseEntity<?> removeAdminRole(@RequestBody AdminRequestForm adminRequestForm) {
+        try {
+            appUserService.removeAdminRole(adminRequestForm);
         } catch (HttpClientErrorException e){
             return new ResponseEntity<>(e.getStatusCode());
         } catch (Error e){
