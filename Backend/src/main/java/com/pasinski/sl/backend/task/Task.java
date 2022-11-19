@@ -22,4 +22,8 @@ public class Task {
     private int points;
     private boolean proofRequired;
     private int usages;
+
+    @ManyToOne
+    @JoinColumn(name = "mission_id_mission")
+    private Mission mission;
 }

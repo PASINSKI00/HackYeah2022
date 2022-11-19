@@ -20,8 +20,9 @@ public class Mission {
     private Long idMission;
     private String name;
     private String description;
+    private Date startDate;
     private Date dueDate;
 
-    @OneToMany(mappedBy = "id_mission", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL)
     private Set<Task> tasks;
 }

@@ -1,5 +1,7 @@
-package com.pasinski.sl.backend.basic;
+package com.pasinski.sl.backend.config;
 
+import com.pasinski.sl.backend.mission.Mission;
+import com.pasinski.sl.backend.mission.MissionRepository;
 import com.pasinski.sl.backend.user.AppUser;
 import com.pasinski.sl.backend.user.AppUserRepository;
 import com.pasinski.sl.backend.user.accessManagment.Privilege;
@@ -16,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 @Component
@@ -28,6 +31,7 @@ public class SetupDataLoader implements ApplicationListener<ContextRefreshedEven
     private final RoleRepository roleRepository;
     private final PrivilegeRepository privilegeRepository;
     private final PasswordEncoder passwordEncoder;
+    private final MissionRepository missionRepository;
 
     @Override
     @Transactional
@@ -58,6 +62,21 @@ public class SetupDataLoader implements ApplicationListener<ContextRefreshedEven
         user2.setEmail("email2@email.com");
         user2.setRoles(Arrays.asList(userRole));
         appUserRepository.save(user2);
+
+
+        Mission mission = new Mission();
+        mission.setName("Mission 1");
+        mission.setDescription("Description 1");
+        mission.setStartDate(new Date());
+        mission.setDueDate(new Date());
+        missionRepository.save(mission);
+
+        Mission mission2 = new Mission();
+        mission2.setName("Mission 2");
+        mission2.setDescription("Description 2");
+        mission2.setStartDate(new Date());
+        mission2.setDueDate(new Date());
+        missionRepository.save(mission2);
 
         alreadySetup = true;
     }
