@@ -1,9 +1,12 @@
 package com.pasinski.sl.backend.user;
 
+import com.pasinski.sl.backend.user.forms.AdminRequestForm;
 import com.pasinski.sl.backend.user.forms.UserForm;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpClientErrorException;
 
@@ -60,6 +63,19 @@ public class AppUserController {
     public ResponseEntity<?> deleteUserOwnAccount() {
         try {
             appUserService.deleteUserOwnAccount();
+        } catch (HttpClientErrorException e){
+            return new ResponseEntity<>(e.getStatusCode());
+        } catch (Error e){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PostMapping("/admin")
+    public ResponseEntity<?> assignAdminRole(@RequestBody AdminRequestForm adminRequestForm) {
+        try {
+            appUserService.assignAdminRole(adminRequestForm);
         } catch (HttpClientErrorException e){
             return new ResponseEntity<>(e.getStatusCode());
         } catch (Error e){

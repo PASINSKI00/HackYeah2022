@@ -1,6 +1,9 @@
 package com.pasinski.sl.backend.user;
 
 import com.pasinski.sl.backend.security.UserSecurityService;
+import com.pasinski.sl.backend.user.accessManagment.Role;
+import com.pasinski.sl.backend.user.accessManagment.RoleRepository;
+import com.pasinski.sl.backend.user.forms.AdminRequestForm;
 import com.pasinski.sl.backend.user.forms.UserForm;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -16,6 +19,7 @@ import org.springframework.web.client.HttpClientErrorException;
 @AllArgsConstructor
 public class AppUserService implements UserDetailsService {
     private AppUserRepository appUserRepository;
+    private RoleRepository roleRepository;
     private UserSecurityService userSecurityService;
     private PasswordEncoder passwordEncoder;
 
@@ -69,5 +73,19 @@ public class AppUserService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         return this.appUserRepository.findByEmail(email).orElseThrow(() -> new UsernameNotFoundException(String.format("User with email %s not found", email)));
+    }
+
+    public void assignAdminRole(AdminRequestForm adminRequestForm) {
+        AppUser appUser = appUserRepository.findById(adminRequestForm.getIdUser()).orElseThrow(() -> new HttpClientErrorException(HttpStatus.NOT_FOUND));
+        Role adminRole = roleRepository.findByName("ROLE_ADMIN");
+
+        if(!userSecurityService.isAdmin())
+            throw new HttpClientErrorException(HttpStatus.FORBIDDEN);
+
+        if(appUser.getRoles().contains(adminRole))
+            return;
+
+        appUser.addRole(adminRole);
+        appUserRepository.save(appUser);
     }
 }

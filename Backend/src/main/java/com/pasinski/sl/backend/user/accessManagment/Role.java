@@ -19,8 +19,8 @@ public class Role {
     private Long id;
 
     private String name;
-    @ManyToMany(mappedBy = "roles")
-    private Collection<AppUser> users;
+//    @ManyToMany(mappedBy = "roles")
+//    private Collection<AppUser> users;
 
     @ManyToMany
     @JoinTable(

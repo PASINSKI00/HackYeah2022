@@ -24,7 +24,8 @@ public class AppUser implements UserDetails {
     private String email;
     private String password;
     private String image;
-
+    private int pointsAll;
+    private int currentMissionPoints;
     @ManyToMany
     @JoinTable(
             name = "users_roles",
@@ -38,6 +39,10 @@ public class AppUser implements UserDetails {
         this.name = name;
         this.email = email;
         this.password = password;
+    }
+
+    public void addRole(Role role) {
+        roles.add(role);
     }
 
     @Override

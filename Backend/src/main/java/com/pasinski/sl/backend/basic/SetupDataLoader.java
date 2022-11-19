@@ -50,6 +50,15 @@ public class SetupDataLoader implements ApplicationListener<ContextRefreshedEven
         user.setRoles(Arrays.asList(adminRole));
         appUserRepository.save(user);
 
+
+        Role userRole = roleRepository.findByName("ROLE_USER");
+        AppUser user2 = new AppUser();
+        user2.setName("Mike");
+        user2.setPassword(passwordEncoder.encode("Password1!"));
+        user2.setEmail("email2@email.com");
+        user2.setRoles(Arrays.asList(userRole));
+        appUserRepository.save(user2);
+
         alreadySetup = true;
     }
 
