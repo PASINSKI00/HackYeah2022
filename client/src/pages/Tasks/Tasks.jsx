@@ -2,6 +2,7 @@ import "./Tasks.scss";
 import React from "react";
 import Box from "@mui/material/Box";
 import Header from "../../components/Header";
+import { Task } from "../../components/Task/Task";
 
 export function Tasks() {
   return (
@@ -18,6 +19,7 @@ export function Tasks() {
           </Box>
         </Box>
         <Box className="greeting-container daily">Twoje dzienne zadania</Box>
+        <Task />
       </Box>
     </Box>
   );
