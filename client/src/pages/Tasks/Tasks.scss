@@ -1,0 +1,82 @@
+.tasks-content-containers.MuiBox-root {
+  margin-top: 8rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.greeting-container.MuiBox-root {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 28px;
+  color: #4b5265;
+  margin-left: 2rem;
+}
+
+.greeting-container.MuiBox-root.daily {
+  margin-top: 2rem;
+  font-size: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 4rem;
+}
+
+.greeting-container.MuiBox-root.daily::after {
+  content: "";
+  position: absolute;
+  border-bottom: 5px #d11936 solid;
+  width: 20%;
+  margin-bottom: -1rem;
+}
+
+.daily-stats-container.MuiBox-root {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 6.72414px 50.431px rgba(87, 161, 249, 0.16);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.daily-stats-container.MuiBox-root > .MuiBox-root {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.daily-stats-container.MuiBox-root > .completed-stat.MuiBox-root {
+  outline: 2px solid #6ec151;
+  border-radius: 30px;
+  color: #6ec151;
+}
+
+.daily-stats-container.MuiBox-root > .completed-stat.MuiBox-root .MuiBox-root {
+  border-radius: 30px;
+  background-color: #6ec151;
+  color: #fff;
+  margin-left: 0.5rem;
+  display: flex;
+  padding: 0.5rem 1rem;
+}
+
+.daily-stats-container.MuiBox-root > .pending-stat.MuiBox-root {
+  outline: 2px solid #53a2ff;
+  border-radius: 30px;
+  color: #53a2ff;
+}
+
+.daily-stats-container.MuiBox-root > .pending-stat.MuiBox-root .MuiBox-root {
+  border-radius: 30px;
+  background-color: #53a2ff;
+  color: #fff;
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+}
