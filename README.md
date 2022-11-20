@@ -15,10 +15,6 @@
 - Prettier
 - ESLint
 
-
-water source: https://plytkilazienki.pl/zuzycie-wody-prysznic-wanna
-co2 source: http://yadda.icm.edu.pl/baztech/element/bwmeta1.element.baztech-69105345-3416-416e-9bb1-39daf6fe9ffb
-
 <br />
 
 ![alt text](./resources/Frame%201.png)
