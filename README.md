@@ -1,106 +1,87 @@
-## How to run backend app
+# Członkowie zespołu:
+- Krystian Pasiński
+- Katarzyna Poręba  
 
-### Build database
-docker run -e POSTGRES_PASSWORD=postgrespw -p 49153:5432/tcp postgres
+<br />
 
-### Run application using java 17
-java -jar backend-0.0.1-SNAPSHOT.jar
+# TechStack:
+- Java 17
+- Spring Boot
+- Spring Security
+- Spring Hibernate
 
-To implement:
-- user email verification
-
-water source: https://plytkilazienki.pl/zuzycie-wody-prysznic-wanna
-co2 source: http://yadda.icm.edu.pl/baztech/element/bwmeta1.element.baztech-69105345-3416-416e-9bb1-39daf6fe9ffb
-
-
-
-Misje:
-    Ogranicz emisje CO2
-        Weryfikowane:
-            - Dzień "z buta": zrób 10 000 kroków .. - zliczanie kroków z pedometra
-            - Dzień transportu publicznego ........ - numer linii i kod boczny pojazdu porównany z lokalizacja
-            - Zasadź drzewo ....................... - weryfikowane przez SI
-        Nie weryfikowane:
-            - Dzień bez mięsa
-            - Wystaw nieużywaną rzecz ............. - numer ogłoszenia wystawionego z twojego konta
-            
-    Ogranicz zużycie wody
-        Weryfikowane:
-            - Wystaw nieużywane ubrania ........... - numer ogłoszenia wystawionego z twojego konta
-        Nie weryfikowane:
-            - Dzień szybkiego prysznica
-
-    - Ogranicz zużycie brudnej energii
-
-
-Zadania:
-    Weryfikowane 4-20 pkt:
-    
-
-    Nie weryfikowane 1-3 pkt:
-        - Dzień bez kupowania w plastiku
-    
-Kluczowe informacje:
-    zespół 
-    
+- React
+- Vite
+- Prettier
+- ESLint
 
 
 
 
-Idea — 30%
-    - zautomatyzowana weryfikacja z użyciem Sztucznej Inteligencji
-    - informowanie o ilości zaoszczędzonych zasobów
-    - Dopaminowe nagradzanie użytkowników 
-        - rankingi
-        - oś czasu ze zdjęciami i lajkami
-        - statystyki
-        - komentarze pod profilem
-    - rywalizacja między zespolami
-    - nagradzanie za poprawe w porównaniu do siebie
-    - nagradzanie za poprawe w porównaniu do średniej
-    - aspekty motywacyjne dla slabiej performujacych na podstawie statystyk
+<br />
 
+![alt text](./resources/Frame%201.png)
+![alt text](./resources/Frame%202.png)
+![alt text](./resources/Frame%203.png)
+![alt text](./resources/Frame%204.png)
+![alt text](./resources/Frame%205.png)
 
-Technical aspects — 30%
-    - dostępne na wszystkich platformach
-    - używane sprawdzone nowoczesne technologie OpenSource
-    - REST API - jeden backend dla wszystkich platform
+<br />
 
-Design — 20%
-    - intuicyjny i nowoczesny design
-    - przyjazny dla użytkownika
-    - elementy kolorystycznie nawiązujące do BGK
+# Pomysły:
 
-Relation to category — 10%
-    - forma gry polegająca na wykonywaniu zadań
-    - tematyka ściśle związane ze zrównoważonym rozwojem
+  - obliczanie i **prezentowanie ilości** zaoszczędzonych zasobów
 
-WOW! Factor — 10%
-    - wspaniałe nazwa aplikacji rozwijające inicjały BGK
+  - społeczne nagrody **dopaminowe**
 
+    - **rankingi**
 
+    - oś czasu ze **zdjęciami i reakcjami**
 
-WhyHowWhat
-Why - problem:
-    Ludzie maja negatywny wpływ na środowisko. Zwiększone emisje CO2 doprowadzające do globalnego ocieplenia mają konsewkwencje, których nie da się przewidzieć. Nie mamy kontroli.
+    - **komentarze** pod profilami
 
-How - rozwiazanie:
-    Poprzez promowanie, nagradzanie i rozwijanie świadomości społeczeństwa na tematy związanie ze zrównoważonym rozwojem odzyskujemy kontrolę, która pozwoli nam na zmianę.
+### Motywowanie:
 
-What - produkt:
-    Nasza aplikacji ma na celu uświadamianie ludzi o tym jak niewiele potrzeba aby dokonać zmian wielkiego kalibru i nagradzać ich za podjęte wysiłki.
+  - **statystyki** użytkownika
 
+  - **rywalizacja** między **zespołami**
 
-additional files: prezentacja pdf
+  - nagrody punktowe za bycie **lepszym od siebie** sprzed tygodnia
 
-Perfect Pitch deck
-    Problem - z WHY
-    Solution - z HOW
-    Why Now:
-        Czas nam ucieka. 
-    Produkt
-    Team
+  - **zautomatyzowana weryfikacja zadań** m.in. z użyciem Sztucznej Inteligencji
 
+<br />
 
-Project description
-    bullet points
+# Aspekty techniczne:
+
+  - dostępne na **wszystkich platformach**
+
+  - używane sprawdzone nowoczesne technologie **OpenSource**
+
+  - REST API - **jeden backend** dla wszystkich platform
+
+<br />
+
+# Design:
+
+  - **intuicyjny** i **nowoczesny** design
+
+  - **przyjazny** dla użytkownika
+
+  - elementy **kolorystycznie** nawiązujące do **BGK**
+
+<br />
+
+# Powiązanie z kategorią:# 
+
+  - forma gry polegająca na wykonywaniu zadań i rywalizacji
+
+  - tematyka ściśle związana ze zrównoważonym rozwojem
+
+<br />
+
+# WOW! Factor:
+
+  - wspaniała nazwa aplikacji rozwijająca skrót BGK
+
+  -	praca wykonana przez dwie osoby
