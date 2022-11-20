@@ -1,0 +1,123 @@
+.signup-container.MuiBox-root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  margin-top: -3rem;
+  background: linear-gradient(180deg, #FFFFFF 0%, #DFE8F3 100%);
+}
+
+.signup-container .header.MuiTypography-root {
+  color: #4b5265;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.signup-container .input-description.MuiTypography-root {
+  color: #4b5265;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.signup-inputs.MuiBox-root {
+  margin-top: 1rem;
+}
+
+.signup-inputs .MuiInputBase-root *::placeholder {
+  color: #4b5265;
+  width: 70%;
+}
+
+.signup-inputs .MuiInputBase-root * {
+  color: #4b5265;
+  font-size: 13px;
+  border-radius: 50px;
+  border: none;
+  filter: drop-shadow(0px 4px 10px rgba(87, 161, 249, 0.4));
+}
+
+.signup-inputs .MuiFormControl-root {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 50px;
+  transition: all 1s;
+}
+
+.signup-inputs .Mui-focused {
+  outline: 2px solid #57a1f9;
+  border-radius: 50px;
+}
+
+.signup-inputs .Mui-focused .MuiOutlinedInput-notchedOutline {
+  border: none;
+}
+
+.signup-inputs .MuiFormControl-root:hover {
+  outline: 2px solid #57a1f9;
+  transition: all 1s;
+}
+
+.signup-buttons.MuiBox-root {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.signup-buttons .MuiButtonBase-root {
+  border-radius: 50px;
+  background: #D11936;
+  color: #fff;
+  padding: 0.5rem 4rem;
+  text-transform: capitalize;
+  transition: all 1s;
+  filter: drop-shadow(0px 5.40166px 10.8033px rgba(87, 161, 249, 0.1));
+}
+
+.signup-buttons .MuiButtonBase-root::hover {
+  padding: 0.5rem 5rem;
+  background: #ae1128;
+}
+
+.signup-buttons .switch-site.MuiTypography-root {
+  font-size: 11px;
+  font-weight: 300;
+  margin-top: 0.4rem;
+  font-size: 13px;
+  color: #878990;
+}
+
+.signup-buttons .switch-site.MuiTypography-root a {
+  color: #878990;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form-container.MuiBox-root {
+  width: 70%;
+}
+
+.error .MuiOutlinedInput-root {
+  outline-color: #995961;
+}
+
+.MuiInputBase-root .toggle-visibility-icon * {
+  color: rgba(91, 89, 153, 0.3);
+  font-size: 16px;
+}
+
+.image-back-container.MuiBox-root img {
+  width: 100%;
+}
+
+.image-back-container.MuiBox-root {
+  position: fixed;
+  bottom: -10px;
+}
