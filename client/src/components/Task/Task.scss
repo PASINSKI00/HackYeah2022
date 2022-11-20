@@ -1,0 +1,64 @@
+.task-container.MuiBox-root {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0.3rem;
+    margin-top: 2rem;
+}
+
+.task-container.MuiBox-root.completed {
+    background: linear-gradient(180deg, #6DDA47 0%, #6EC151 96.87%);
+}
+
+.task-container.MuiBox-root.pending {
+    background: linear-gradient(180deg, #449AFF 0%, #2F8EFF 96.87%);
+}
+
+.task-top-container.MuiBox-root {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.task-top-container.MuiBox-root img {
+    width: 160px;
+    margin-top: -2rem;
+    margin-right: -1rem;
+}
+
+.task-text-container.MuiBox-root {
+    color: #fff;
+    margin: 1rem 1rem;
+}
+
+.task-text-container.MuiBox-root .task-text-title {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.task-stats-container.MuiBox-root {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.task-container.MuiBox-root::after {
+    content: "";
+    background: url("/images/background-task.png");
+    opacity: 0.15;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -5;
+    border-radius: 30px;
+}
